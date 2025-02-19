@@ -1,0 +1,452 @@
+[
+    {
+        "id": 1,
+        "marca": "Volkswagen",
+        "modelo": "Virtus",
+        "potencia": 130,
+        "ano": 2023,
+        "cor": "Azul",
+        "preco": 79585.57
+    },
+    {
+        "id": 2,
+        "marca": "Ford",
+        "modelo": "Fiesta",
+        "potencia": 130,
+        "ano": 2016,
+        "cor": "Branco",
+        "preco": 135443.18
+    },
+    {
+        "id": 3,
+        "marca": "Ford",
+        "modelo": "Fiesta",
+        "potencia": 120,
+        "ano": 2019,
+        "cor": "Prata",
+        "preco": 114512.82
+    },
+    {
+        "id": 4,
+        "marca": "Ford",
+        "modelo": "Ka",
+        "potencia": 220,
+        "ano": 2016,
+        "cor": "Prata",
+        "preco": 92351.82
+    },
+    {
+        "id": 5,
+        "marca": "Toyota",
+        "modelo": "Camry",
+        "potencia": 180,
+        "ano": 2022,
+        "cor": "Verde",
+        "preco": 85093.89
+    },
+    {
+        "id": 6,
+        "marca": "Ford",
+        "modelo": "Focus",
+        "potencia": 210,
+        "ano": 2017,
+        "cor": "Azul",
+        "preco": 83854.28
+    },
+    {
+        "id": 7,
+        "marca": "Chevrolet",
+        "modelo": "Onix",
+        "potencia": 180,
+        "ano": 2015,
+        "cor": "Vermelho",
+        "preco": 104793.01
+    },
+    {
+        "id": 8,
+        "marca": "Fiat",
+        "modelo": "Toro",
+        "potencia": 140,
+        "ano": 2018,
+        "cor": "Preto",
+        "preco": 96101.02
+    },
+    {
+        "id": 9,
+        "marca": "Toyota",
+        "modelo": "Camry",
+        "potencia": 280,
+        "ano": 2020,
+        "cor": "Verde",
+        "preco": 106705.8
+    },
+    {
+        "id": 10,
+        "marca": "Fiat",
+        "modelo": "Cronos",
+        "potencia": 70,
+        "ano": 2019,
+        "cor": "Branco",
+        "preco": 95641.07
+    },
+    {
+        "id": 11,
+        "marca": "Volkswagen",
+        "modelo": "Jetta",
+        "potencia": 170,
+        "ano": 2023,
+        "cor": "Cinza",
+        "preco": 107557.32
+    },
+    {
+        "id": 12,
+        "marca": "Chevrolet",
+        "modelo": "Cruze",
+        "potencia": 140,
+        "ano": 2018,
+        "cor": "Cinza",
+        "preco": 53941.51
+    },
+    {
+        "id": 13,
+        "marca": "Renault",
+        "modelo": "Duster",
+        "potencia": 260,
+        "ano": 2022,
+        "cor": "Prata",
+        "preco": 63183.78
+    },
+    {
+        "id": 14,
+        "marca": "Volkswagen",
+        "modelo": "Golf",
+        "potencia": 200,
+        "ano": 2018,
+        "cor": "Preto",
+        "preco": 92351.82
+    },
+    {
+        "id": 15,
+        "marca": "Hyundai",
+        "modelo": "Santa Fe",
+        "potencia": 170,
+        "ano": 2022,
+        "cor": "Branco",
+        "preco": 65713.42
+    },
+    {
+        "id": 16,
+        "marca": "Hyundai",
+        "modelo": "Tucson",
+        "potencia": 250,
+        "ano": 2017,
+        "cor": "Preto",
+        "preco": 90166.3
+    },
+    {
+        "id": 17,
+        "marca": "Volkswagen",
+        "modelo": "Tiguan",
+        "potencia": 140,
+        "ano": 2019,
+        "cor": "Azul",
+        "preco": 142269.26
+    },
+    {
+        "id": 18,
+        "marca": "Toyota",
+        "modelo": "Corolla",
+        "potencia": 270,
+        "ano": 2021,
+        "cor": "Laranja",
+        "preco": 143036.92
+    },
+    {
+        "id": 19,
+        "marca": "Ford",
+        "modelo": "Ka",
+        "potencia": 270,
+        "ano": 2019,
+        "cor": "Cinza",
+        "preco": 53941.51
+    },
+    {
+        "id": 20,
+        "marca": "Volkswagen",
+        "modelo": "Tiguan",
+        "potencia": 100,
+        "ano": 2019,
+        "cor": "Preto",
+        "preco": 53941.51
+    },
+    {
+        "id": 21,
+        "marca": "Nissan",
+        "modelo": "Frontier",
+        "potencia": 140,
+        "ano": 2020,
+        "cor": "Prata",
+        "preco": 53941.51
+    },
+    {
+        "id": 22,
+        "marca": "Nissan",
+        "modelo": "Frontier",
+        "potencia": 110,
+        "ano": 2021,
+        "cor": "Laranja",
+        "preco": 95641.07
+    },
+    {
+        "id": 23,
+        "marca": "Fiat",
+        "modelo": "Mobi",
+        "potencia": 290,
+        "ano": 2018,
+        "cor": "Azul",
+        "preco": 62644.15
+    },
+    {
+        "id": 24,
+        "marca": "Ford",
+        "modelo": "Focus",
+        "potencia": 140,
+        "ano": 2019,
+        "cor": "Preto",
+        "preco": 124042.9
+    },
+    {
+        "id": 25,
+        "marca": "Chevrolet",
+        "modelo": "Cruze",
+        "potencia": 150,
+        "ano": 2017,
+        "cor": "Azul",
+        "preco": 95065.16
+    },
+    {
+        "id": 26,
+        "marca": "Chevrolet",
+        "modelo": "Tracker",
+        "potencia": 140,
+        "ano": 2020,
+        "cor": "Laranja",
+        "preco": 106705.8
+    },
+    {
+        "id": 27,
+        "marca": "Ford",
+        "modelo": "Ranger",
+        "potencia": 230,
+        "ano": 2016,
+        "cor": "Branco",
+        "preco": 132806.13
+    },
+    {
+        "id": 28,
+        "marca": "Chevrolet",
+        "modelo": "Spin",
+        "potencia": 190,
+        "ano": 2023,
+        "cor": "Vermelho",
+        "preco": 63183.78
+    },
+    {
+        "id": 29,
+        "marca": "Nissan",
+        "modelo": "Versa",
+        "potencia": 100,
+        "ano": 2022,
+        "cor": "Laranja",
+        "preco": 66723.76
+    },
+    {
+        "id": 30,
+        "marca": "Hyundai",
+        "modelo": "Santa Fe",
+        "potencia": 70,
+        "ano": 2017,
+        "cor": "Laranja",
+        "preco": 111460.8
+    },
+    {
+        "id": 31,
+        "marca": "Volkswagen",
+        "modelo": "Jetta",
+        "potencia": 150,
+        "ano": 2016,
+        "cor": "Cinza",
+        "preco": 127494.31
+    },
+    {
+        "id": 32,
+        "marca": "Ford",
+        "modelo": "EcoSport",
+        "potencia": 220,
+        "ano": 2016,
+        "cor": "Preto",
+        "preco": 128601.92
+    },
+    {
+        "id": 33,
+        "marca": "Jeep",
+        "modelo": "Renegade",
+        "potencia": 130,
+        "ano": 2018,
+        "cor": "Branco",
+        "preco": 59272.13
+    },
+    {
+        "id": 34,
+        "marca": "Fiat",
+        "modelo": "Toro",
+        "potencia": 220,
+        "ano": 2020,
+        "cor": "Prata",
+        "preco": 86980.16
+    },
+    {
+        "id": 35,
+        "marca": "Chevrolet",
+        "modelo": "Cruze",
+        "potencia": 220,
+        "ano": 2020,
+        "cor": "Branco",
+        "preco": 111460.8
+    },
+    {
+        "id": 36,
+        "marca": "Volkswagen",
+        "modelo": "Virtus",
+        "potencia": 280,
+        "ano": 2015,
+        "cor": "Laranja",
+        "preco": 86980.16
+    },
+    {
+        "id": 37,
+        "marca": "Hyundai",
+        "modelo": "Tucson",
+        "potencia": 110,
+        "ano": 2016,
+        "cor": "Cinza",
+        "preco": 73118.33
+    },
+    {
+        "id": 38,
+        "marca": "Fiat",
+        "modelo": "Toro",
+        "potencia": 280,
+        "ano": 2023,
+        "cor": "Laranja",
+        "preco": 98918.52
+    },
+    {
+        "id": 39,
+        "marca": "Honda",
+        "modelo": "CR-V",
+        "potencia": 240,
+        "ano": 2023,
+        "cor": "Preto",
+        "preco": 95065.16
+    },
+    {
+        "id": 40,
+        "marca": "Nissan",
+        "modelo": "Sentra",
+        "potencia": 190,
+        "ano": 2020,
+        "cor": "Cinza",
+        "preco": 143498.55
+    },
+    {
+        "id": 41,
+        "marca": "Nissan",
+        "modelo": "Kicks",
+        "potencia": 160,
+        "ano": 2019,
+        "cor": "Prata",
+        "preco": 143498.55
+    },
+    {
+        "id": 42,
+        "marca": "Nissan",
+        "modelo": "Frontier",
+        "potencia": 210,
+        "ano": 2019,
+        "cor": "Branco",
+        "preco": 122165.83
+    },
+    {
+        "id": 43,
+        "marca": "Hyundai",
+        "modelo": "Santa Fe",
+        "potencia": 160,
+        "ano": 2022,
+        "cor": "Cinza",
+        "preco": 142269.26
+    },
+    {
+        "id": 44,
+        "marca": "Hyundai",
+        "modelo": "Santa Fe",
+        "potencia": 240,
+        "ano": 2018,
+        "cor": "Prata",
+        "preco": 102429.89
+    },
+    {
+        "id": 45,
+        "marca": "Ford",
+        "modelo": "Focus",
+        "potencia": 120,
+        "ano": 2018,
+        "cor": "Branco",
+        "preco": 90166.3
+    },
+    {
+        "id": 46,
+        "marca": "Ford",
+        "modelo": "Ranger",
+        "potencia": 130,
+        "ano": 2021,
+        "cor": "Laranja",
+        "preco": 53941.51
+    },
+    {
+        "id": 47,
+        "marca": "Nissan",
+        "modelo": "Versa",
+        "potencia": 90,
+        "ano": 2018,
+        "cor": "Branco",
+        "preco": 142269.26
+    },
+    {
+        "id": 48,
+        "marca": "Chevrolet",
+        "modelo": "Cruze",
+        "potencia": 250,
+        "ano": 2018,
+        "cor": "Laranja",
+        "preco": 59690.39
+    },
+    {
+        "id": 49,
+        "marca": "Ford",
+        "modelo": "Ka",
+        "potencia": 100,
+        "ano": 2022,
+        "cor": "Laranja",
+        "preco": 92974.27
+    },
+    {
+        "id": 50,
+        "marca": "Nissan",
+        "modelo": "Kicks",
+        "potencia": 140,
+        "ano": 2019,
+        "cor": "Preto",
+        "preco": 122226.29
+    }
+]

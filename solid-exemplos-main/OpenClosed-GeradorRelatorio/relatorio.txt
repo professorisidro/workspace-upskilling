@@ -1,0 +1,6 @@
+14/04/2023;Teclado;100.0
+15/04/2023;Microondas;500.0
+16/04/2023;Televisao;2500.0
+17/04/2023;Batedeira;350.0
+18/04/2023;Liquidificador;150.0
+19/04/2023;Computador;1500.0
