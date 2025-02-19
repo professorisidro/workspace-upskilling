@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import br.meli.com.concessionaria.dto.AveragePriceByBrand;
 import br.meli.com.concessionaria.model.Veiculo;
 import br.meli.com.concessionaria.repo.IVeiculoRepo;
 
@@ -33,6 +34,30 @@ public class VeiculoServiceImpl  implements IVeiculoService {
 	public Veiculo getById(Integer id) {
 		// TODO Auto-generated method stub
 		return repo.findById(id).orElse(null);
+	}
+
+	@Override
+	public List<Veiculo> getByMarca(String marca) {
+		// TODO Auto-generated method stub
+		return repo.findByMarca(marca);
+	}
+
+	@Override
+	public List<Veiculo> getByIntervaloAnos(Integer ini, Integer fim) {
+		// TODO Auto-generated method stub
+		return repo.findByYearBetween(ini, fim);
+	}
+
+	@Override
+	public List<Veiculo> getByCor(String cor) {
+		// TODO Auto-generated method stub
+		return repo.findByCor(cor);
+	}
+
+	@Override
+	public AveragePriceByBrand getPrecoMedioPorMarca(String marca) {
+		// TODO Auto-generated method stub
+		return new AveragePriceByBrand(marca, repo.findPrecoMedioPorMarca(marca));
 	}
 
 }

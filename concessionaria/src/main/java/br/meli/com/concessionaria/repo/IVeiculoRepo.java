@@ -9,4 +9,8 @@ public interface IVeiculoRepo {
 	public Veiculo save(Veiculo v);
 	public List<Veiculo> findAll();
 	public Optional<Veiculo> findById(Integer id);
+	public List<Veiculo> findByMarca(String marca);
+	public List<Veiculo> findByYearBetween(Integer start, Integer end);
+	public List<Veiculo> findByCor(String cor);
+	public Double findPrecoMedioPorMarca(String marca);
 }

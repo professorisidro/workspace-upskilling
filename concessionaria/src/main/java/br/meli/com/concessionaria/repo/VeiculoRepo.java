@@ -48,5 +48,25 @@ public class VeiculoRepo implements IVeiculoRepo{
 		// TODO Auto-generated method stub
 		return this.database.stream().filter(v -> v.getId().equals(id)).findFirst();
 	}
+	@Override
+	public List<Veiculo> findByMarca(String marca) {
+		// TODO Auto-generated method stub
+		return database.stream().filter(v -> v.getMarca().equalsIgnoreCase(marca)).toList();
+	}
+	@Override
+	public List<Veiculo> findByYearBetween(Integer start, Integer end) {
+		// TODO Auto-generated method stub
+		return database.stream().filter(v-> v.getAno()>= start && v.getAno() <= end).toList();
+	}
+	@Override
+	public List<Veiculo> findByCor(String cor) {
+		// TODO Auto-generated method stub
+		return database.stream().filter(v -> v.getCor().equalsIgnoreCase(cor)).toList();
+	}
+	@Override
+	public Double findPrecoMedioPorMarca(String marca) {
+		// TODO Auto-generated method stub
+		return database.stream().filter(v -> v.getMarca().equalsIgnoreCase(marca)).mapToDouble(Veiculo::getPreco).average().orElse(0.0);
+	}
 
 }
