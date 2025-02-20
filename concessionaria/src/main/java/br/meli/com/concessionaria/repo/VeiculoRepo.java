@@ -1,9 +1,7 @@
 package br.meli.com.concessionaria.repo;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
@@ -11,6 +9,8 @@ import org.springframework.util.ResourceUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import br.meli.com.concessionaria.exceptions.EmptyListException;
+import br.meli.com.concessionaria.exceptions.VehicleNotFoundException;
 import br.meli.com.concessionaria.model.Veiculo;
 
 @Repository
@@ -40,18 +40,28 @@ public class VeiculoRepo implements IVeiculoRepo{
 	@Override
 	public List<Veiculo> findAll() {
 		// TODO Auto-generated method stub
+		if (this.database.isEmpty()) {
+			throw new EmptyListException("Nao encontrei veiculos no criterio selecionado");
+		}
 		return this.database;
 	}
 
 	@Override
-	public Optional<Veiculo> findById(Integer id) {
+	public Veiculo findById(Integer id) {
 		// TODO Auto-generated method stub
-		return this.database.stream().filter(v -> v.getId().equals(id)).findFirst();
+		return this.database.stream()
+				            .filter(v -> v.getId().equals(id))
+				            .findFirst()
+				            .orElseThrow(() -> new VehicleNotFoundException("Veiculo de ID "+id+" nao encontrado"));
 	}
 	@Override
 	public List<Veiculo> findByMarca(String marca) {
 		// TODO Auto-generated method stub
-		return database.stream().filter(v -> v.getMarca().equalsIgnoreCase(marca)).toList();
+		List<Veiculo> res = database.stream().filter(v -> v.getMarca().equalsIgnoreCase(marca)).toList();
+		if (res.isEmpty()) {
+			throw new EmptyListException("Nao ha veiculos com este criterio");
+		}
+		return res;
 	}
 	@Override
 	public List<Veiculo> findByYearBetween(Integer start, Integer end) {
