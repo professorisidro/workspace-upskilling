@@ -25,13 +25,20 @@ public class JoiaServiceImpl implements IJoiaService{
 	@Override
 	public List<Joia> findAll() {
 		// TODO Auto-generated method stub
-		return (List<Joia>)repo.findAll();
+//		return (List<Joia>)repo.findAll();
+//		return repo.findByValidoTrue();
+		return repo.findByOrderByNomeAsc();
 	}
 
 	@Override
 	public Joia findById(Integer id) {
 		// TODO Auto-generated method stub
-		return repo.findById(id).orElse(null);
+		Joia j = repo.findById(id).orElse(null);
+		if (j != null) {
+			System.out.println("nome "+j.getNome());
+		}
+		return null;
+//		return repo.findById(id).orElse(null);
 	}
 
 }

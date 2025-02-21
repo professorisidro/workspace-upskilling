@@ -1,10 +1,15 @@
 package br.com.meli.testeh2.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -15,18 +20,30 @@ public class Joia {
 	@Column(name = "id_joia")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column(name = "nome", length = 100)
 	private String nome;
+	
 	@Column(name = "material")
 	private String material;
+	
 	@Column(name = "peso")
 	private Integer peso;
+	
 	@Column(name = "particularidade")
 	private String particularidade;
+	
 	@Column(name = "tem_pedra")
 	private Boolean temPedra;
+	
 	@Column(name = "valido")
 	private Boolean valido;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_categoria")
+	@JsonIgnoreProperties("joias")
+	private Categoria categoria;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -69,4 +86,11 @@ public class Joia {
 	public void setValido(Boolean valido) {
 		this.valido = valido;
 	}
+	public Categoria getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+	
 }
