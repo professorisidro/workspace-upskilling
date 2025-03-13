@@ -1,6 +1,7 @@
 package br.com.meli.conversor.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -18,6 +19,11 @@ public class CurrencyControllerAdvice {
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<?> handleBadRequest(MethodArgumentNotValidException ex){
-		return ResponseEntity.status(400).body(new ErrorDTO(ex.getMessage()));
+		StringBuilder str = new StringBuilder();
+		for (ObjectError er: ex.getAllErrors()) {
+			str.append(er.getDefaultMessage());
+		}
+		
+		return ResponseEntity.status(400).body(new ErrorDTO(String.join(",",str.toString())));
 	}
 }
