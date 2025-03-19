@@ -1,0 +1,1 @@
+insert into tbl_veiculo (ano,cor,marca,modelo,placa,preco,id_veiculo) values (2025,'Chumbo Bandida','Porsche','Cayene','ABC1234',2500000.0,default)
