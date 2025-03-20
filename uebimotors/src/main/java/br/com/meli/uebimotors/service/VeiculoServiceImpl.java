@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.meli.uebimotors.exceptions.ConflictException;
 import br.com.meli.uebimotors.exceptions.MalformedVehicleException;
+import br.com.meli.uebimotors.exceptions.NotFoundException;
 import br.com.meli.uebimotors.model.Veiculo;
 import br.com.meli.uebimotors.repo.VeiculoRepo;
 
@@ -26,5 +27,11 @@ public class VeiculoServiceImpl implements IVeiculoService{
 			throw new ConflictException("Existing vehicle "+v.getPlaca());
 		}
 		return repo.save(v);
+	}
+
+	@Override
+	public Veiculo findById(Integer id) {
+		// TODO Auto-generated method stub
+		return repo.findById(id).orElseThrow(() -> new NotFoundException("Vehicle "+id+" not found"));
 	}
 }

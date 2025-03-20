@@ -15,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import br.com.meli.uebimotors.exceptions.ConflictException;
 import br.com.meli.uebimotors.exceptions.MalformedVehicleException;
+import br.com.meli.uebimotors.exceptions.NotFoundException;
 import br.com.meli.uebimotors.model.Veiculo;
 import br.com.meli.uebimotors.repo.VeiculoRepo;
 import br.com.meli.uebimotors.service.VeiculoServiceImpl;
@@ -87,6 +88,33 @@ public class VeiculoServiceTest {
 		
 		assertThrows(MalformedVehicleException.class, ()->{
 			service.addNew(v);
+		});
+	}
+	
+	@Test
+	@DisplayName("Sucesso ao recuperar um veiculo existente")
+	public void shouldRetrieveValidVehicle() {
+		Veiculo v = new Veiculo();
+		v.setId(123);
+		v.setMarca("Chevrolet");
+		v.setModelo("Corsa");
+		v.setAno(1996);
+		v.setPreco(4999.0);
+		v.setPlaca("AAA9876");
+		v.setCor("Bordeaux com detalhes em branco no capô");
+		
+		Mockito.when(repo.findById(123)).thenReturn(Optional.of(v));
+		
+		assertNotNull(service.findById(123));
+	}
+	
+	@Test
+	@DisplayName("Falha a o recuperar um veiculo inexistente")
+	public void shouldNotRetrieveInvalidVehicle() {
+		Mockito.when(repo.findById(1000)).thenReturn(Optional.ofNullable(null));
+		
+		assertThrows(NotFoundException.class, () -> {
+			service.findById(1000);
 		});
 	}
 	
