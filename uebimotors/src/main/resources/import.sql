@@ -1,1 +1,3 @@
-insert into tbl_veiculo (ano,cor,marca,modelo,placa,preco,id_veiculo) values (2025,'Chumbo Bandida','Porsche','Cayene','ABC1234',2500000.0,default)
+insert into tbl_veiculo (ano,cor,marca,modelo,placa,preco,id_veiculo) values (2025,'Chumbo Bandida','Porsche','Cayene','ABC1234',2500000.0,101)
+insert into tbl_veiculo (ano,cor,marca,modelo,placa,preco,id_veiculo) values (1996,'Bordo Desbotado','Chevrolet','Corsa','XYZ9876',5000.0,102)
+insert into tbl_veiculo (ano,cor,marca,modelo,placa,preco,id_veiculo) values (2010,'Prata','Hiunday','Devagaroster','AAA9999',25000.0,103)

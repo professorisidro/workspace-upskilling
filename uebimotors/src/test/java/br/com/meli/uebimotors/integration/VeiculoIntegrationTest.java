@@ -77,5 +77,18 @@ public class VeiculoIntegrationTest {
 			   .andExpect(MockMvcResultMatchers.status().is(400));
 			
 	}
+	
+	@Test
+	@DisplayName("Integração onde encontra um veiculo")
+	public void shouldFindVehicleById() throws Exception{
+		mockMvc.perform(MockMvcRequestBuilders.get("/veiculos/101"))
+			   .andExpect(MockMvcResultMatchers.status().is(200));
+	}
 
+	@Test
+	@DisplayName("Integração onde nao encontra um veiculo")
+	public void shouldNotFindVehicleById() throws Exception{
+		mockMvc.perform(MockMvcRequestBuilders.get("/veiculos/999"))
+			   .andExpect(MockMvcResultMatchers.status().is(404));
+	}
 }
