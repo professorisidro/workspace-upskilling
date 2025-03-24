@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.meli.conversor.dto.ConversaoDTO;
 import br.com.meli.conversor.dto.CurrencyDTO;
+import br.com.meli.conversor.exceptions.CurrencyConflictException;
 import br.com.meli.conversor.exceptions.CurrencyNotFoundException;
 import br.com.meli.conversor.model.Currency;
 import br.com.meli.conversor.repo.CurrencyRepo;
@@ -32,11 +33,17 @@ public class ConversorServiceImpl implements IConversorService {
 	@Override
 	public Currency addNew(CurrencyDTO currency) {
 		// TODO Auto-generated method stub
+		try {
+			Currency c = repo.findByName(currency.name());
+			throw new CurrencyConflictException("Currency "+currency.name()+ " already exists");
+		}
+		catch(CurrencyNotFoundException ex) {
+			Currency c = new Currency();
+			c.setName(currency.name());
+			c.setRate(1.0/currency.dolarValue());
+			return repo.save(c);
+		}
 		
-		Currency c = new Currency();
-		c.setName(currency.name());
-		c.setRate(1.0/currency.dolarValue());
-		return repo.save(c);
 	}
 
 	@Override

@@ -27,7 +27,8 @@ public class VeiculoController {
 	}
 
 	@GetMapping("/veiculos")
-	public List<Veiculo> recuperarTodos() {
+	public List<Veiculo> recuperarTodos(@RequestParam(required = false) Double v1) {
+		System.out.println("v1 ="+v1);
 		return service.getAll();
 	}
 
